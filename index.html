@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PuzzleForge™</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <h1>PuzzleForge™</h1>
+      <p>Turn any image into a playable puzzle in seconds.</p>
+    </header>
+
+    <section class="controls">
+      <input type="file" id="upload" accept="image/*" />
+      <select id="difficulty">
+        <option value="20">Easy — 20 pieces</option>
+        <option value="50" selected>Medium — 50 pieces</option>
+        <option value="100">Hard — 100 pieces</option>
+      </select>
+      <button id="generateBtn">Generate Puzzle</button>
+      <button id="shuffleBtn" disabled>Shuffle</button>
+      <button id="resetBtn" disabled>Reset</button>
+    </section>
+
+    <section class="statusbar">
+      <div><strong>Moves:</strong> <span id="moves">0</span></div>
+      <div><strong>Matched:</strong> <span id="matched">0</span></div>
+      <div><strong>Total:</strong> <span id="totalPieces">0</span></div>
+    </section>
+
+    <main class="game-area">
+      <div id="board" class="board"></div>
+    </main>
+
+    <section class="footer-note">
+      <p>When two neighboring pieces are correctly placed, the border between them disappears.</p>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
