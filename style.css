@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.topbar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.topbar h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.topbar p {
+  margin: 0;
+  color: #ccc;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+.controls button {
+  cursor: pointer;
+}
+
+.statusbar {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.game-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  display: grid;
+  gap: 0;
+  border: 2px solid #fff;
+  background: #222;
+  width: min(95vw, 1000px);
+  aspect-ratio: 16 / 9;
+  user-select: none;
+}
+
+.piece {
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.22);
+  background-repeat: no-repeat;
+  cursor: grab;
+  transition: border-color 0.15s ease;
+}
+
+.piece.dragging {
+  opacity: 0.75;
+}
+
+.piece.matched-top {
+  border-top-color: transparent;
+}
+
+.piece.matched-right {
+  border-right-color: transparent;
+}
+
+.piece.matched-bottom {
+  border-bottom-color: transparent;
+}
+
+.piece.matched-left {
+  border-left-color: transparent;
+}
+
+.complete-message {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7dffb3;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 15px;
+  color: #aaa;
+}
